@@ -94,9 +94,38 @@ a{
     }
     .principal__conteudo, .imagem_principal {
         width: 100%; /* Full width for content and image */
+        max-width: 600px; /* Limit max width to align content better on large screens */
     }
     .principal__links__link {
         width: auto; /* Allow link width to adjust based on content */
         margin-top: 10px; /* Smaller top margin */
+    }
+}
+
+@media (max-width: 768px) {
+    .principal {
+        margin: 3%; /* Reduce margin for medium screens */
+        flex-direction: column;
+    }
+    .principal__conteudo__titulo, .principal__conteudo__paragrafo {
+        padding: 0 10px; /* Add padding to ensure text does not touch the screen borders */
+    }
+    .principal__links {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        align-items: center; /* Center-align the links */
+    }
+    .principal__links__link {
+        margin-bottom: 10px; /* Add bottom margin between links */
+    }
+}
+@media (max-width: 480px) {
+    .principal {
+        margin: 2%; /* Further reduce margin for small screens */
+    }
+    .principal__conteudo__titulo {
+        font-size: 28px; /* Reduce font size for small screens */
+    }
+    .principal__conteudo__paragrafo {
+        font-size: 18px; /* Reduce paragraph font size for better readability */
     }
 }

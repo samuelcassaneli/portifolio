@@ -11,35 +11,43 @@
     0%, 100% {
         transform: translateY(0);
     }
-    10% {
+    40% {
         transform: translateY(-20px);
     }
 }
+:root{
+    --primaria: #406664;
+    --secundaria:#ffffff;
+    --terciaria:#D2FEA3;
+    --cor-quartenaria: #353E3E;
+    --cor-hover: #D2FEA3;
+    --fonte-principal: "Krona one", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
 body{
-    background-color:black;
-    
+    background-color: var(--primaria);
     box-sizing: border-box;
 }
 h1{
-    color: #F6F6F6;
+    color: var(--secundaria);
     font-family: "Krona One", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 p{
-    color: #F6F6F6;
+    color: var(--secundaria);
     font-family: "Krona One", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 a{
-    color: #F6F6F6;
-    font-family: "Krona One", sans-serif;
+    color: var(--secundaria);
+    font-family: var(--fonte-principal);
     font-weight: 400;
     font-style: normal;
 }
 .titulo-destaque{
-    color: #22D4FD;
+    color: var(--terciaria);
     font-family: "Krona One", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -49,7 +57,7 @@ a{
     margin: 0;
 }
 .principal{
-    padding: 9%;
+    padding: 3%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -58,15 +66,15 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 9%;
+    padding: 3%;
     align-items: start;
 
 }
 .principal__conteudo__titulo{
-    font-size: 36px;
+    font-size: 1.8rem;
 }
 .principal__conteudo__paragrafo{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -78,14 +86,14 @@ a{
     max-width: 100%;
     height: auto;
     animation: float 5s ease-in-out infinite;
-    color: #F6F6F6;
+    color: var(--secundaria);
     margin-top: 0;
 }
 .imagem_principal2{
     max-width: 100%;
     height: auto;
-    animation: float2 2s ease-in-out infinite;
-    color: #F6F6F6;
+    animation: float2 5s ease-in-out infinite;
+    color: var(--secundaria);
     margin-top: 0;
 }
 
@@ -98,7 +106,7 @@ a{
 }
 .subtitulo{
     font-family: 'krona one', sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 .principal__links__link{
     display: flex;
@@ -114,50 +122,55 @@ a{
     text-decoration: none;
     color: rgb(255, 255, 255);
     padding: 16px 20px;
-    transition: background-color 0.8s ease;
+    transition: background-color 0.3s ease;
     font-style:oblique;
-    border-color: #22D4FD;
+    border-color: var(--terciaria);
     border-style: solid;
     flex: 1;
-    width: 185px;
+    width: 30%;
     
 
 }
 .principal__links__link:hover{
-    background-color: #272727;
-    color: rgb(255, 255, 255);
-    width: 200px;
+    background-color: var(--cor-hover);
+    color: var(--primaria);
+    width: 35%;
     height: auto;
 }
 .rodape{
-    color: black;
-    background-color: #22D4FD;
+    color: var(--primaria);
+    background-color: var(--terciaria);
     padding: 24px;
     text-align: center;
 }
 .cabecalho_links{
     text-decoration: none;
-    color: #22D4FD;
+    color: var(--terciaria);
     padding: 20px;
     transition: transform 0.3s ease;
     display: inline-block;
 }
 .cabecalho_links:hover{
     transform: scale(1.1);
+    color: var(--secundaria);
     
 }
 .cabecalho{
-    color: #22D4FD;
+    color: var(--terciaria);
     padding-top: 2%;
+    padding-left: 40px;
+    border-bottom: 2px solid var(--terciaria);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
 }
 .principal__conteudo__paragrafo1{
-    font-size: 15px;
+    font-size: 0.9rem;
     text-align: justify;
     font-family: "roboto", sans-serif;
     font-weight: bold;
 }
 .titulo-destaque1{
-    color: #22D4FD;
+    color: var(--terciaria);
     font-family: "roboto", sans-serif;
     font-weight: 400;
     font:bold;
@@ -185,7 +198,7 @@ a{
         max-width: 100%;
         height: auto;
         animation: float2 2s ease-in-out infinite;
-        color: #F6F6F6;
+        color: var(--secundaria);
         margin-top: 20px;
         padding-top: 10px;
     }
@@ -215,7 +228,7 @@ a{
         max-width: 100%;
         height: auto;
         animation: float2 2s ease-in-out infinite;
-        color: #F6F6F6;
+        color: var(--secundaria);
         margin-top: 20px;
         padding-top: 10px;
     }
@@ -224,11 +237,12 @@ a{
 @media (max-width: 480px) {
     .principal {
         margin: 2%;
+        flex-direction: row;
     }
     .principal__conteudo__titulo {
-        font-size: 28px;
+        font-size: 20px;
     }
     .principal__conteudo__paragrafo {
-        font-size: 18px;
+        font-size: 15px;
     }
 }

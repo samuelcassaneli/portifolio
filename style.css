@@ -141,6 +141,14 @@ a{
     color: var(--primaria);
     background-color: var(--terciaria);
     padding: 24px;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+}
+.rodape__text{
+    color: var(--primaria);
+    background-color: var(--terciaria);
+    padding: 24px;
     text-align: center;
 }
 .cabecalho_links{

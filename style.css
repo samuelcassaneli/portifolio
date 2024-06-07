@@ -140,17 +140,21 @@ a{
 .rodape{
     color: var(--primaria);
     background-color: var(--terciaria);
-    padding: 24px;
+    padding: 12px;
     display:flex;
     flex-direction: row;
     align-items:center;
     text-align:center;
+    justify-content: center;
 }
 .rodape__text{
     color: var(--primaria);
     background-color: var(--terciaria);
-    padding: 24px;
+    padding: 2px ;
     text-align: center;
+}
+.link_none{
+    text-decoration: none;
 }
 .cabecalho_links{
     text-decoration: none;
